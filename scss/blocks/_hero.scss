@@ -1,0 +1,128 @@
+.hero {
+    position: relative;
+
+    height: 400px;
+
+    background-color: #999;
+    background-image: url('./../img/hero/hero-bg.png');
+    background-repeat: no-repeat;
+    background-position: center center; /* x y */
+    background-size: cover;
+    z-index: 2;
+    &__container {
+        height: 100%;
+    }
+
+    &__wrapper {
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
+        height: 100%;
+    }
+}
+
+.hero-swiper {
+    width: 600px;
+    height: auto;
+    z-index: 10;
+}
+
+.hero-swiper__wrapper {
+    display: flex;
+    align-items: stretch;
+
+    padding-bottom: 180px;
+}
+
+.swiper-slide {
+}
+
+.hero-slide {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    height: auto;
+
+    // .hero-slide__title
+
+    &__title {
+        font-size: 40px;
+        font-weight: 700;
+
+        margin-bottom: 30px;
+
+        text-align: center;
+
+        color: var(--white-color);
+    }
+
+    // .hero-slide__description
+
+    &__description {
+        font-size: 20px;
+        font-weight: 700;
+
+        margin-bottom: 30px;
+
+        text-align: center;
+
+        color: var(--white-color);
+    }
+
+    // .hero-slide__link
+
+    &__link {
+        font-size: 14px;
+        font-weight: 600;
+
+        display: block;
+
+        padding: 10px 24px;
+
+        text-decoration: none;
+
+        color: var(--white-color);
+        border-radius: 4px;
+        background-color: var(--cta);
+    }
+}
+
+.swiper-pagination-bullet {
+    width: 168px;
+    height: 4px;
+
+    opacity: 1;
+    border-radius: 0px;
+    background-color: rgb(255, 255, 255);
+}
+
+.swiper-pagination-bullet-active {
+    background-color: var(--cta);
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+    display: none;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    width: 24px;
+    height: 24px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.swiper-button-prev {
+    background-image: url("./../img/hero/slider-left-arrow.svg");
+}
+
+.swiper-button-next {
+    background-image: url("./../img/hero/slider-right-arrow.svg");
+}

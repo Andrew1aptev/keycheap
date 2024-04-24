@@ -1,4 +1,4 @@
-const swiper = new Swiper('.swiper', {
+const swiper = new Swiper('.hero-swiper', {
     // Optional parameters
     direction: 'horizontal',
     loop: true,
@@ -13,10 +13,9 @@ const swiper = new Swiper('.swiper', {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
-
-    // And if we need scrollbar
-    scrollbar: {
-        el: '.swiper-scrollbar',
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
     },
 });
 
