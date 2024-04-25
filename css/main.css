@@ -339,6 +339,27 @@ body {
   background-image: url("./../img/hero/slider-right-arrow.svg");
 }
 
+@media only screen and (max-width: 1024px) {
+  .hero-swiper {
+    width: 400px;
+  }
+  .hero-slide__title {
+    font-size: 30px;
+  }
+  .hero-slide__description {
+    font-size: 16px;
+  }
+  .hero-slide__link {
+    padding: 8px 20px;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none;
+  }
+  .swiper-pagination-bullet {
+    width: 100px;
+  }
+}
 .products {
   padding: 80px 0px;
 }
