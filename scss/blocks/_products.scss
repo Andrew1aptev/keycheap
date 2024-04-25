@@ -1,0 +1,75 @@
+.products {
+    padding: 80px 0px;
+    // .products__container
+
+    &__container {
+    }
+}
+
+.products-row {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: var(--gap);
+
+    // отступ
+
+    --gap: 24px;
+
+    // количество элементов которое мы хотим видеть в одной строке
+
+    --elements: 4;
+    margin-bottom: 160px;
+}
+
+.products-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 23px;
+    border-radius: 8px;
+    border: 1px solid #F4F4F4;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.03), 1px 1px 4px 0 rgba(0, 0, 0, 0.03), 5px 6px 7px 0 rgba(0, 0, 0, 0.03), 10px 12px 10px 0 rgba(0, 0, 0, 0.02), 18px 22px 11px 0 rgba(0, 0, 0, 0), 29px 35px 13px 0 rgba(0, 0, 0, 0);
+    /*
+    1.ширина родителя (100%)
+    2.количество элементов в строке (elements)
+    3.количество отступов (кол-во элементов минус 1 (elements-1) )
+    */
+    width: calc((100% - (var(--elements) - 1) * var(--gap)) / (var(--elements)) );
+    min-height: 264px;
+    text-decoration: none;
+    background-color: rgb(255, 255, 255);
+    transition: all .3s;
+
+    &:hover{
+        background-color: var(--cta);
+    }
+    &:hover &__text{
+        color: #ffffff;
+    }
+    // .products-link__img
+
+    &__img {
+    }
+
+    // .products-link__text
+
+    &__text {
+        font-size: 24px;
+        font-weight: 300;
+        text-align: center;
+        max-width: 97px;
+        color: black;
+    }
+}
+@media only screen and (max-width: 1024px) {
+    .products-row{
+        --elements: 2;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .products-row{
+        --elements: 1;
+    }
+}
