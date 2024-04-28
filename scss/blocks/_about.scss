@@ -1,0 +1,104 @@
+.about {
+    background-color: var(--card-stroke);
+    // .about__row
+    &__container{
+
+    }
+    &__row {
+        display: flex;
+        padding-left: max(15px, calc((100% - 1128px) / 2));
+    }
+    &__row--right{
+        padding-right: max(15px, calc((100% - 1128px) / 2));
+        padding-left: 0px;
+    }
+    &__sertificates{
+        display: flex;
+        justify-content: space-between;
+        column-gap: 24px;
+        padding: 87px 0px;
+        flex-wrap: wrap;
+        --gap: 24px;
+        --elements: 3;
+        gap: var(--gap);
+        &-photo{
+            width: calc((100% - (var(--elements) - 1) * var(--gap)) / (var(--elements)) );
+        }
+    }
+}
+.about-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 552px;
+    flex-shrink: 0;
+    margin-right: 120px;
+    // .about-content__title
+
+    &__title {
+        font-size: 28px;
+        font-weight: 600;
+        margin-bottom: 16px;
+    }
+
+    // .about-content__text
+
+    &__text {
+        font-size: 14px;
+        font-weight: 400;
+    }
+}
+.about-content--right{
+    margin-left: 120px;
+    margin-right: 0px;
+}
+.about-img {
+    background-image: url("./../img/about/photo-1.jpg");
+    background-color: #999;
+    background-position: center center; /* x y */
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 409px;
+    width: calc(100% - 552px - 120px);
+}
+.about-img--left{
+    background-image: url("./../img/about/photo-2.jpg");
+}
+@media only screen and (max-width: 1024px) {
+    .about__container{
+        max-width: 1158px;
+        margin: 0 auto;
+        padding: 0px 15px;
+    }
+    .about__row, .about__row-right{
+        justify-content: center;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .about-content, .about-content--right{
+        flex-shrink: 1;
+        margin-right: 0px;
+        margin-left: 0px;
+
+    }
+    .about-img{
+        display: none;
+    }
+    .about__sertificates{
+        --elements: 2;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .about{
+        padding-top: 24px;
+    }
+    .about__sertificates{
+        --elements: 1;
+    }
+    .about-content{
+
+        &__title{
+            font-size: 20px;
+        }
+    }
+}
