@@ -583,11 +583,10 @@ body {
 .about__sertificates {
   max-width: 1158px;
   margin: 0 auto;
-  padding: 0px 15px;
   display: flex;
   justify-content: space-between;
   column-gap: 24px;
-  padding: 87px 0px;
+  padding: 87px 15px;
   flex-wrap: wrap;
   --gap: 24px;
   --elements: 3;
@@ -653,6 +652,8 @@ body {
     flex-shrink: 1;
     margin-right: 0px;
     margin-left: 0px;
+    padding-top: 24px;
+    padding-bottom: 24px;
   }
   .about-img {
     display: none;
