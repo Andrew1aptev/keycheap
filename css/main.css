@@ -581,6 +581,9 @@ body {
   padding-left: 0px;
 }
 .about__sertificates {
+  max-width: 1158px;
+  margin: 0 auto;
+  padding: 0px 15px;
   display: flex;
   justify-content: space-between;
   column-gap: 24px;
@@ -629,6 +632,10 @@ body {
 
 .about-img--left {
   background-image: url("./../img/about/photo-2.jpg");
+}
+
+.container-sertificates {
+  background-color: white;
 }
 
 @media only screen and (max-width: 1024px) {
